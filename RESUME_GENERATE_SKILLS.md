@@ -89,7 +89,8 @@ The generator must preserve template formatting from `Oliver Hong Resume 2026.do
 
 ## Output Convention
 
-- Filename: `resume+oliver+<role-slug>+vNNN.docx`
+- Filename (finance-friendly): `YYYYMMDD_Oliver_Hong_Resume_<RoleTitle>.docx`
+- Same-day duplicates: append sequence suffix `_02`, `_03`, ...
 - Directory: `/Users/pppop/Desktop/Projects/Oliver RAG/resume-output/`
 
 ## Preflight Checklist
@@ -106,4 +107,3 @@ The generator must preserve template formatting from `Oliver Hong Resume 2026.do
 - If required sections are missing: fail fast and exit.
 - If role profile is missing: fallback to generic profile and log `profile_fallback=true`.
 - If one-page trimming cannot converge: stop generation and return actionable error.
-

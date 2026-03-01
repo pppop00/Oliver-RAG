@@ -325,16 +325,21 @@ def _leadership_block(resume: dict) -> Tuple[str, List[str]]:
     return title, bullets
 
 
-def _next_version_path(output_dir: Path, role_slug: str) -> Path:
+def _next_output_path(output_dir: Path, role_slug: str) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
-    pattern = re.compile(rf"^resume\+oliver\+{re.escape(role_slug)}\+v(\d{{3}})\.docx$")
-    max_ver = 0
-    for p in output_dir.glob(f"resume+oliver+{role_slug}+v*.docx"):
-        m = pattern.match(p.name)
-        if m:
-            max_ver = max(max_ver, int(m.group(1)))
-    next_ver = max_ver + 1
-    return output_dir / f"resume+oliver+{role_slug}+v{next_ver:03d}.docx"
+    date_stamp = date.today().strftime("%Y%m%d")
+    role_part = role_slug.replace("-", "_").title()
+    base = f"{date_stamp}_Oliver_Hong_Resume_{role_part}"
+    first = output_dir / f"{base}.docx"
+    if not first.exists():
+        return first
+
+    seq = 2
+    while True:
+        candidate = output_dir / f"{base}_{seq:02d}.docx"
+        if not candidate.exists():
+            return candidate
+        seq += 1
 
 
 def generate_role_resume(root: Path, role: str) -> GenerationResult:
@@ -383,7 +388,7 @@ def generate_role_resume(root: Path, role: str) -> GenerationResult:
 
     apply_generated_data(doc, generated)
 
-    out_path = _next_version_path(root / "resume-output", role_slug)
+    out_path = _next_output_path(root / "resume-output", role_slug)
     save_document(doc, out_path)
 
     return GenerationResult(output_path=out_path, profile_fallback=profile_fallback, preflight=preflight)

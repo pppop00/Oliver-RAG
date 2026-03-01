@@ -223,6 +223,7 @@ rg -n "last_updated|version" oliver-knowledge-base/structured-data/*.yaml
 1. 必须先读取根目录 `RESUME_GENERATE_SKILLS.md`。
 2. 必须完成该文档定义的 preflight checklist。
 3. 未打印 `pre_read=ok` 时，禁止进入生成步骤。
+4. 输出命名遵循金融投递友好格式：`YYYYMMDD_Oliver_Hong_Resume_<RoleTitle>.docx`。
 
 ---
 

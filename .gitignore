@@ -1,5 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+~$*.docx
 resume-output/*.docx
 !resume-output/.gitkeep
