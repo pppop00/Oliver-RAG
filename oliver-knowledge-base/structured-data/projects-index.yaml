@@ -1,0 +1,48 @@
+projects:
+  - id: "vbvr-2026"
+    name: "A Very Big Video Reasoning Suite (VBVR)"
+    type: "research"
+    role: "Co-author"
+    status: "completed"
+    start_date: "2026-02"
+    end_date: "2026-02"
+    key_topics:
+      - "video reasoning"
+      - "benchmark design"
+      - "cognitive architecture"
+      - "scaling study"
+    key_metrics:
+      - "200 tasks"
+      - "2,015,000 images"
+      - "1,007,500 videos"
+      - "1,000,000 train / 7,500 test"
+      - "human alignment rho > 0.9 for automated scoring"
+    links:
+      paper: "https://arxiv.org/abs/2602.20159"
+      website: "https://video-reason.com"
+      markdown: "../projects/vbvr-a-very-big-video-reasoning-suite.md"
+
+  - id: "constancybench-vlms-2025"
+    name: "Probing Perceptual Constancy in Large Vision-Language Models"
+    type: "research"
+    role: "Co-author"
+    status: "completed"
+    start_date: "2025-02"
+    end_date: "2025-02"
+    key_topics:
+      - "vision-language models"
+      - "perceptual constancy"
+      - "benchmarking"
+      - "statistical analysis"
+    key_metrics:
+      - "155 models evaluated"
+      - "236 experiments across color/size/shape"
+      - "mean accuracy: shape 0.723, color 0.588, size 0.584"
+      - "positive performance scaling with model size"
+    links:
+      paper: "https://arxiv.org/abs/2502.20173"
+      markdown: "../projects/probing-perceptual-constancy-in-vlms.md"
+
+metadata:
+  last_updated: "2026-03-01"
+  owner: "Oliver (Zelong) Hong"

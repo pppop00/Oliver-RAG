@@ -1,0 +1,226 @@
+# 结构化简历数据模板
+# 用于生成不同格式的简历和快速检索
+
+personal_info:
+  name: "Your Full Name"
+  name_chinese: "中文名"
+  email: "your.email@example.com"
+  phone: "+1-XXX-XXX-XXXX"
+  location:
+    city: "City"
+    state: "State"
+    country: "Country"
+  links:
+    linkedin: "https://linkedin.com/in/yourprofile"
+    github: "https://github.com/yourusername"
+    website: "https://yourwebsite.com"
+    portfolio: "https://portfolio.com"
+  
+summary: |
+  2-3 sentences about your professional background, key skills, and career focus.
+  用简洁的语言概括职业背景、核心技能和职业方向。
+
+education:
+  - degree: "Bachelor of Science"
+    major: "Computer Science"
+    minor: "Mathematics"  # optional
+    institution: "University Name"
+    location: "City, State"
+    start_date: "2019-09"
+    end_date: "2023-05"
+    gpa: "3.8/4.0"
+    honors:
+      - "Dean's List (All Semesters)"
+      - "Magna Cum Laude"
+    relevant_courses:
+      - "Machine Learning"
+      - "Data Structures & Algorithms"
+      - "Database Systems"
+    markdown_link: "../education/university-name.md"
+
+  - degree: "Master of Science"
+    major: "Data Science"
+    institution: "Graduate School Name"
+    location: "City, State"
+    start_date: "2023-09"
+    end_date: "2025-05"
+    gpa: "3.9/4.0"
+    thesis: "Thesis Title"
+    advisor: "Professor Name"
+    markdown_link: "../education/grad-school-name.md"
+
+experience:
+  - title: "Software Engineer"
+    company: "Company Name"
+    location: "City, State"
+    employment_type: "Full-time"  # Full-time|Part-time|Internship|Contract
+    start_date: "2023-06"
+    end_date: "present"
+    description: |
+      Brief description of role and responsibilities.
+    highlights:
+      - "Developed X feature that improved Y by Z%"
+      - "Led team of N engineers on project X"
+      - "Reduced system latency by X% through optimization"
+    technologies:
+      - Python
+      - React
+      - AWS
+      - Docker
+    markdown_link: "../experiences/company-name-software-engineer.md"
+
+  - title: "Software Engineering Intern"
+    company: "Another Company"
+    location: "City, State"
+    employment_type: "Internship"
+    start_date: "2022-06"
+    end_date: "2022-08"
+    description: |
+      Summer internship focused on backend development.
+    highlights:
+      - "Built feature X serving Y users"
+      - "Improved test coverage from A% to B%"
+    technologies:
+      - Java
+      - Spring Boot
+      - MySQL
+    markdown_link: "../experiences/another-company-intern.md"
+
+projects:
+  - name: "Project Name 1"
+    role: "Lead Developer"
+    start_date: "2023-01"
+    end_date: "2023-06"
+    description: |
+      Brief project description and objectives.
+    highlights:
+      - "Key achievement 1"
+      - "Key achievement 2"
+    technologies:
+      - Python
+      - TensorFlow
+      - React
+    links:
+      github: "https://github.com/username/project"
+      demo: "https://project-demo.com"
+      paper: "https://arxiv.org/paper-link"  # if applicable
+    markdown_link: "../projects/project-name-1.md"
+
+  - name: "Project Name 2"
+    role: "Full Stack Developer"
+    start_date: "2022-09"
+    end_date: "2022-12"
+    description: |
+      Another project description.
+    highlights:
+      - "Achievement 1"
+      - "Achievement 2"
+    technologies:
+      - JavaScript
+      - Node.js
+      - MongoDB
+    links:
+      github: "https://github.com/username/project2"
+    markdown_link: "../projects/project-name-2.md"
+
+skills:
+  programming_languages:
+    - name: "Python"
+      proficiency: "expert"  # beginner|intermediate|advanced|expert
+      years: 5
+      markdown_link: "../skills/python.md"
+    - name: "JavaScript/TypeScript"
+      proficiency: "advanced"
+      years: 3
+      markdown_link: "../skills/javascript.md"
+    - name: "Java"
+      proficiency: "intermediate"
+      years: 2
+      markdown_link: "../skills/java.md"
+  
+  frameworks_libraries:
+    - name: "React"
+      proficiency: "advanced"
+      markdown_link: "../skills/react.md"
+    - name: "TensorFlow"
+      proficiency: "advanced"
+      markdown_link: "../skills/tensorflow.md"
+    - name: "FastAPI"
+      proficiency: "expert"
+      markdown_link: "../skills/fastapi.md"
+  
+  tools_platforms:
+    - name: "Git"
+      proficiency: "advanced"
+      markdown_link: "../skills/git.md"
+    - name: "Docker"
+      proficiency: "advanced"
+      markdown_link: "../skills/docker.md"
+    - name: "AWS"
+      proficiency: "intermediate"
+      markdown_link: "../skills/aws.md"
+  
+  domains:
+    - name: "Machine Learning"
+      proficiency: "advanced"
+      markdown_link: "../skills/machine-learning.md"
+    - name: "Web Development"
+      proficiency: "expert"
+      markdown_link: "../skills/web-development.md"
+    - name: "Data Engineering"
+      proficiency: "intermediate"
+      markdown_link: "../skills/data-engineering.md"
+
+publications:  # optional
+  - title: "Paper Title"
+    authors: ["Your Name", "Co-author 1", "Co-author 2"]
+    venue: "Conference/Journal Name"
+    year: 2024
+    links:
+      paper: "https://arxiv.org/link"
+      code: "https://github.com/repo"
+    markdown_link: "../projects/research-project.md"
+
+certifications:  # optional
+  - name: "AWS Certified Solutions Architect"
+    issuer: "Amazon Web Services"
+    date: "2024-03"
+    credential_id: "XXXXX"
+    link: "https://credential-link"
+  
+  - name: "Professional Certificate Name"
+    issuer: "Issuing Organization"
+    date: "2023-12"
+
+awards:  # optional
+  - name: "Award Name"
+    issuer: "Organization"
+    date: "2023-05"
+    description: "Brief description of the award"
+  
+  - name: "Scholarship Name"
+    issuer: "University"
+    date: "2021-09"
+    amount: "$10,000"
+
+languages:
+  - language: "English"
+    proficiency: "Native/Fluent"
+  - language: "Chinese (Mandarin)"
+    proficiency: "Native"
+  - language: "Spanish"
+    proficiency: "Intermediate"
+
+interests:  # optional
+  - "Machine Learning Research"
+  - "Open Source Contribution"
+  - "Technical Writing"
+
+# Metadata
+last_updated: "2025-10-19"
+version: "1.0"
+
+
+
+
+

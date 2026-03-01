@@ -1,0 +1,35 @@
+# 敏感信息 - 不要提交到版本控制
+structured-data/contacts.yaml
+structured-data/personal-notes.yaml
+structured-data/*-private.yaml
+structured-data/*-private.json
+
+# 临时文件
+*.tmp
+*.draft
+.DS_Store
+Thumbs.db
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 生成的文件
+_generated/
+output/
+exports/
+
+# 私人反思（如需保密）
+# reflections/*-private.md
+
+# 备份文件
+*.bak
+*.backup
+
+
+
+
+

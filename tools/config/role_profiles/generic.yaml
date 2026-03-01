@@ -1,0 +1,18 @@
+name: "generic"
+keywords:
+  must: []
+  boost:
+    - "analytics"
+    - "python"
+    - "sql"
+    - "machine learning"
+    - "bi"
+  penalty: []
+section_caps:
+  experience_count: 4
+  leadership_count: 1
+bullet_caps_per_experience: [4, 5, 5, 4]
+trim_priority:
+  - "compress_bullets"
+  - "drop_low_score_bullets"
+  - "reduce_experience_count"

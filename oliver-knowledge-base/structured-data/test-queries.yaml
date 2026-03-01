@@ -1,0 +1,48 @@
+test_cases:
+  - query: "Where is Oliver currently working and what is he doing there?"
+    expected_docs:
+      - "../experiences/epsilon-data-scientist.md"
+    expected_facts:
+      - "Data Scientist at Epsilon"
+      - "Started in 2025-07"
+      - "Reduced manual work by 65%"
+
+  - query: "What are Oliver's strongest risk and compliance experiences?"
+    expected_docs:
+      - "../experiences/bank-of-china-risk-analyst-intern.md"
+      - "../experiences/midwest-employers-casualty-consultant.md"
+      - "../skills/financial-risk-and-compliance-analytics.md"
+    expected_facts:
+      - "100% audit readiness for USD 2B AUM"
+      - "HIPAA and NY DFS compliant integration work"
+      - "AML and KYC automation outcomes"
+
+  - query: "What research papers did Oliver co-author?"
+    expected_docs:
+      - "../projects/probing-perceptual-constancy-in-vlms.md"
+      - "../projects/vbvr-a-very-big-video-reasoning-suite.md"
+    expected_facts:
+      - "155 VLMs and 236 experiments"
+      - "200 tasks with 2,015,000 images and 1,007,500 videos"
+
+  - query: "What did Oliver study in school?"
+    expected_docs:
+      - "../education/trinity-bs-physics-applied-mathematics.md"
+      - "../education/washu-ms-isem.md"
+    expected_facts:
+      - "BS in Physics with minor in Applied Mathematics"
+      - "MS in Information Systems and Engineering Management"
+
+  - query: "Which skills are supported by both job outcomes and research work?"
+    expected_docs:
+      - "../skills/machine-learning-and-statistical-modeling.md"
+      - "../skills/python-for-data-and-ml.md"
+      - "../projects/vbvr-a-very-big-video-reasoning-suite.md"
+      - "../projects/probing-perceptual-constancy-in-vlms.md"
+    expected_facts:
+      - "Python applied in enterprise automation"
+      - "ML/statistical modeling in finance and research benchmarks"
+
+metadata:
+  last_updated: "2026-03-01"
+  purpose: "retrieval and answer-quality regression checks for the personal RAG stack"

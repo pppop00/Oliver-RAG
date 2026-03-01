@@ -1,0 +1,73 @@
+skills:
+  programming:
+    - name: "Python"
+      proficiency: "expert"
+      years_estimated: 4
+      domains: ["analytics", "machine-learning", "data-engineering"]
+      last_used: "2026-03"
+      link: "../skills/python-for-data-and-ml.md"
+    - name: "SQL"
+      proficiency: "advanced"
+      years_estimated: 3
+      domains: ["etl", "data-quality", "risk-analytics"]
+      last_used: "2026-03"
+      link: "../skills/sql-and-etl-engineering.md"
+    - name: "VBA"
+      proficiency: "advanced"
+      years_estimated: 3
+      domains: ["operations", "dashboard-automation"]
+      last_used: "2024-08"
+      link: "../skills/power-bi-and-tableau-analytics.md"
+
+  machine_learning:
+    - name: "Regression and Time Series"
+      proficiency: "advanced"
+      link: "../skills/machine-learning-and-statistical-modeling.md"
+    - name: "Classification and Clustering"
+      proficiency: "advanced"
+      link: "../skills/machine-learning-and-statistical-modeling.md"
+    - name: "XGBoost and Random Forest"
+      proficiency: "advanced"
+      link: "../skills/machine-learning-and-statistical-modeling.md"
+    - name: "PCA and dimensionality reduction"
+      proficiency: "advanced"
+      link: "../skills/machine-learning-and-statistical-modeling.md"
+
+  analytics_and_bi:
+    - name: "Power BI (DAX)"
+      proficiency: "expert"
+      link: "../skills/power-bi-and-tableau-analytics.md"
+    - name: "Tableau"
+      proficiency: "advanced"
+      link: "../skills/power-bi-and-tableau-analytics.md"
+    - name: "A/B testing"
+      proficiency: "advanced"
+      link: "../skills/machine-learning-and-statistical-modeling.md"
+
+  data_platforms:
+    - name: "Azure (Logic Apps, Azure ML)"
+      proficiency: "advanced"
+      link: "../skills/cloud-data-platforms-azure-aws.md"
+    - name: "AWS (EC2, S3)"
+      proficiency: "intermediate"
+      link: "../skills/cloud-data-platforms-azure-aws.md"
+    - name: "PostgreSQL / MySQL / SQL Server"
+      proficiency: "advanced"
+      link: "../skills/sql-and-etl-engineering.md"
+
+  domain_expertise:
+    - name: "Financial risk and compliance analytics"
+      proficiency: "advanced"
+      evidence:
+        - "Bank of China New York: AML/KYC and audit readiness for USD 2B AUM"
+        - "Midwest Employers Casualty: HIPAA and NY DFS compliant integration workflows"
+      link: "../skills/financial-risk-and-compliance-analytics.md"
+    - name: "Video reasoning and VLM evaluation research"
+      proficiency: "intermediate"
+      evidence:
+        - "Co-author on VBVR"
+        - "Co-author on perceptual constancy benchmarking"
+      link: "../projects/vbvr-a-very-big-video-reasoning-suite.md"
+
+metadata:
+  last_updated: "2026-03-01"

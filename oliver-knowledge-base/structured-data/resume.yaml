@@ -1,0 +1,238 @@
+personal_info:
+  name: "Oliver (Zelong) Hong"
+  email: "h.zelong@wustl.edu"
+  phone: "+1-860-461-3409"
+  location:
+    city: "Boston"
+    state: "MA"
+    country: "USA"
+  links:
+    linkedin: ""
+    github: ""
+    website: ""
+    portfolio: ""
+  status:
+    residency: "U.S. Permanent Resident"
+    credential: "CFA Level II Candidate"
+
+summary: |
+  Data scientist and analytics practitioner with cross-domain experience in finance, insurance,
+  and operations. Combines Python/SQL ETL engineering with BI systems and machine learning
+  to automate decision workflows, improve data quality, and support audit-ready analytics.
+  Research co-author in video reasoning and vision-language model evaluation.
+
+education:
+  - degree: "Master of Science"
+    major: "Information Systems and Engineering Management"
+    institution: "Washington University in St. Louis"
+    location: "St. Louis, MO"
+    start_date: "2023-08"
+    end_date: "2025-05"
+    markdown_link: "../education/washu-ms-isem.md"
+
+  - degree: "Bachelor of Science"
+    major: "Physics"
+    minor: "Applied Mathematics"
+    institution: "Trinity College"
+    location: "Hartford, CT"
+    start_date: "2019-08"
+    end_date: "2023-05"
+    honors:
+      - "Faculty Honor, Top 10% (2022, 2023)"
+    markdown_link: "../education/trinity-bs-physics-applied-mathematics.md"
+
+experience:
+  - title: "Data Scientist"
+    company: "Epsilon"
+    location: "Boston, MA"
+    employment_type: "Full-time"
+    start_date: "2025-07"
+    end_date: "present"
+    highlights:
+      - "Standardized sales compensation SOPs with EU global team for U.S. offices."
+      - "Automated analysis pipelines using PowerQuery, Power BI (DAX), and Llama 3.2, reducing manual work by 65%."
+      - "Integrated 60 business plans across 120 teams into Xactly and Oracle Cloud."
+      - "Evaluated AWS, Azure, Fabric, and Databricks options with leadership and vendor teams."
+    technologies: ["Python", "Power BI", "PowerQuery", "Llama 3.2", "Xactly", "Oracle Cloud", "AWS", "Azure"]
+    markdown_link: "../experiences/epsilon-data-scientist.md"
+
+  - title: "Consultant"
+    company: "Midwest Employers Casualty"
+    location: "St. Louis, MO"
+    employment_type: "Contract"
+    start_date: "2025-01"
+    end_date: "2025-05"
+    highlights:
+      - "Automated 83% of data ingestion tasks and reduced claims-processing downtime by 62% with 99.2% data integrity."
+      - "Built Python middleware for 120+ third-party administrator integrations under HIPAA and NY DFS requirements."
+      - "Mapped 12,000+ HTS codes to repair procedures with 98% automated accuracy using Alteryx workflows."
+      - "Engineered Python ETL pipelines and deployed Medallion workflows via Azure Logic Apps."
+      - "Led Jira process standardization and reduced model errors by 30%."
+    technologies: ["Python", "Alteryx", "Azure Logic Apps", "Jira", "ETL", "SQL"]
+    markdown_link: "../experiences/midwest-employers-casualty-consultant.md"
+
+  - title: "Risk Analyst Intern (p-KYC Project Lead)"
+    company: "Bank of China New York"
+    location: "New York, NY"
+    employment_type: "Internship"
+    start_date: "2024-05"
+    end_date: "2024-08"
+    highlights:
+      - "Received Cooperation Innovation and Outstanding Contribution awards."
+      - "Delivered 100% audit readiness for USD 2B AUM portfolios through anomaly detection pipelines."
+      - "Led 8 cross-functional teams and automated 95% of KYC workflows for 11K+ accounts."
+      - "Reduced false-positive AML alerts by 40% through ETL correlation of transactions and credit risk trends."
+      - "Flagged 12 high-risk cohorts from 2M+ transactions and maintained 99.7% fraud accuracy."
+    technologies: ["Python", "Tableau", "VBA", "ETL", "AML", "KYC"]
+    markdown_link: "../experiences/bank-of-china-risk-analyst-intern.md"
+
+  - title: "Private Equity Analyst"
+    company: "General Pacific Capital"
+    location: "New York, NY"
+    employment_type: "Internship"
+    start_date: "2024-01"
+    end_date: "2024-04"
+    highlights:
+      - "Improved LBO IRR predictability by 29% using MLE-enhanced modeling with macro indicators."
+      - "Built Power BI + Monte Carlo scenario room for C-suite stress testing across 50+ scenarios."
+      - "Supported USD 120M+ whitespace opportunities and 3 term-sheet stage deals."
+      - "Ran market research across 12 consumer-tech verticals using Bloomberg, FactSet, and PitchBook."
+    technologies: ["Power BI", "Monte Carlo", "LBO Modeling", "Bloomberg", "FactSet", "PitchBook"]
+    markdown_link: "../experiences/general-pacific-capital-private-equity-analyst.md"
+
+  - title: "Project Management Associate"
+    company: "Cross-City Construction Corporation"
+    location: "New York, NY"
+    employment_type: "Part-time"
+    start_date: "2021-05"
+    end_date: "2022-09"
+    highlights:
+      - "Managed a USD 100M AUM real-estate portfolio across two Manhattan construction sites."
+      - "Supervised 70 personnel and kept milestones 10% ahead of schedule."
+      - "Delivered VBA-driven executive dashboards for project and schedule management."
+    technologies: ["Excel VBA", "Project Management", "Dashboarding"]
+    markdown_link: "../experiences/cross-city-construction-project-management-associate.md"
+
+  - title: "Vice President, Technology Engineering Information Management Society (TEIMS)"
+    company: "Washington University in St. Louis"
+    location: "St. Louis, MO"
+    employment_type: "Leadership"
+    start_date: "2023-09"
+    end_date: "2025-05"
+    highlights:
+      - "Elected vice president and selected as a student speaker for internship events."
+      - "Organized three STEM career fairs for undergraduate, master's, and PhD audiences."
+      - "Coordinated 15+ alumni/faculty speakers and 300+ attendees."
+    technologies: ["Event Operations", "Leadership", "Stakeholder Management"]
+    markdown_link: "../experiences/teims-vice-president-technology.md"
+
+projects:
+  - name: "A Very Big Video Reasoning Suite (VBVR)"
+    role: "Co-author"
+    start_date: "2026-02"
+    end_date: "2026-02"
+    description: |
+      Large-scale video reasoning suite introducing a 200-task taxonomy-aligned dataset and
+      a reproducible rule-based benchmark framework for model evaluation.
+    highlights:
+      - "2,015,000 images and 1,007,500 videos generated across 200 reasoning tasks."
+      - "Includes 1,000,000 train and 7,500 test samples for scaling analysis."
+      - "Shows early emergence of out-of-domain generalization while still below human performance."
+    technologies: ["Video Reasoning", "Benchmarking", "Cognitive Taxonomy", "Distributed Data Pipeline"]
+    links:
+      paper: "https://arxiv.org/abs/2602.20159"
+      website: "https://video-reason.com"
+    markdown_link: "../projects/vbvr-a-very-big-video-reasoning-suite.md"
+
+  - name: "Probing Perceptual Constancy in Large Vision-Language Models"
+    role: "Co-author"
+    start_date: "2025-02"
+    end_date: "2025-02"
+    description: |
+      Benchmark study of perceptual constancy in VLMs across color, size, and shape domains
+      using controlled cognitive experiments.
+    highlights:
+      - "Evaluated 155 VLMs on 236 experiments."
+      - "Shape constancy outperformed color and size (0.723 vs 0.588 and 0.584)."
+      - "Observed positive scaling relationship between model size and constancy performance."
+    technologies: ["Vision-Language Models", "Benchmark Design", "Statistical Analysis", "IRT"]
+    links:
+      paper: "https://arxiv.org/abs/2502.20173"
+    markdown_link: "../projects/probing-perceptual-constancy-in-vlms.md"
+
+skills:
+  programming_languages:
+    - name: "Python"
+      proficiency: "expert"
+      markdown_link: "../skills/python-for-data-and-ml.md"
+    - name: "SQL"
+      proficiency: "advanced"
+      markdown_link: "../skills/sql-and-etl-engineering.md"
+    - name: "VBA"
+      proficiency: "advanced"
+      markdown_link: "../skills/power-bi-and-tableau-analytics.md"
+
+  frameworks_libraries:
+    - name: "PyTorch"
+      proficiency: "advanced"
+      markdown_link: "../skills/machine-learning-and-statistical-modeling.md"
+    - name: "TensorFlow"
+      proficiency: "advanced"
+      markdown_link: "../skills/machine-learning-and-statistical-modeling.md"
+    - name: "XGBoost"
+      proficiency: "advanced"
+      markdown_link: "../skills/machine-learning-and-statistical-modeling.md"
+
+  tools_platforms:
+    - name: "Power BI (DAX)"
+      proficiency: "expert"
+      markdown_link: "../skills/power-bi-and-tableau-analytics.md"
+    - name: "Tableau"
+      proficiency: "advanced"
+      markdown_link: "../skills/power-bi-and-tableau-analytics.md"
+    - name: "Azure"
+      proficiency: "advanced"
+      markdown_link: "../skills/cloud-data-platforms-azure-aws.md"
+    - name: "AWS (EC2, S3)"
+      proficiency: "intermediate"
+      markdown_link: "../skills/cloud-data-platforms-azure-aws.md"
+
+  domains:
+    - name: "Machine Learning"
+      proficiency: "advanced"
+      markdown_link: "../skills/machine-learning-and-statistical-modeling.md"
+    - name: "Financial Risk and Compliance Analytics"
+      proficiency: "advanced"
+      markdown_link: "../skills/financial-risk-and-compliance-analytics.md"
+    - name: "Data Visualization"
+      proficiency: "expert"
+      markdown_link: "../skills/power-bi-and-tableau-analytics.md"
+
+publications:
+  - title: "A Very Big Video Reasoning Suite"
+    venue: "arXiv preprint"
+    year: 2026
+    links:
+      paper: "https://arxiv.org/abs/2602.20159"
+      website: "https://video-reason.com"
+    markdown_link: "../projects/vbvr-a-very-big-video-reasoning-suite.md"
+
+  - title: "Probing Perceptual Constancy in Large Vision-Language Models"
+    venue: "arXiv preprint"
+    year: 2025
+    links:
+      paper: "https://arxiv.org/abs/2502.20173"
+    markdown_link: "../projects/probing-perceptual-constancy-in-vlms.md"
+
+interests:
+  - "Brazilian Jiu-Jitsu"
+  - "Paddling"
+  - "Rowing"
+
+source_documents:
+  - "raw/resume-2026-raw.md"
+  - "../projects/sources/vbvr-2026-fulltext.md"
+  - "../projects/sources/perceptual-constancy-vlms-2025-fulltext.md"
+
+last_updated: "2026-03-01"
+version: "1.1"

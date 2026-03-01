@@ -1,0 +1,82 @@
+timeline:
+  - date: "2019-08"
+    event: "Started BS in Physics with minor in Applied Mathematics at Trinity College."
+    category: "education"
+    importance: 5
+    link: "../education/trinity-bs-physics-applied-mathematics.md"
+
+  - date: "2021-05"
+    event: "Joined Cross-City Construction Corporation as Project Management Associate."
+    category: "experience"
+    importance: 4
+    link: "../experiences/cross-city-construction-project-management-associate.md"
+
+  - date: "2022-09"
+    event: "Completed Cross-City Construction role after portfolio and schedule delivery milestones."
+    category: "experience"
+    importance: 3
+    link: "../experiences/cross-city-construction-project-management-associate.md"
+
+  - date: "2023-05"
+    event: "Graduated from Trinity College with Faculty Honor (Top 10%)."
+    category: "education"
+    importance: 5
+    link: "../education/trinity-bs-physics-applied-mathematics.md"
+
+  - date: "2023-08"
+    event: "Started MS in Information Systems and Engineering Management at Washington University in St. Louis."
+    category: "education"
+    importance: 5
+    link: "../education/washu-ms-isem.md"
+
+  - date: "2023-09"
+    event: "Elected Vice President of TEIMS at WashU."
+    category: "leadership"
+    importance: 4
+    link: "../experiences/teims-vice-president-technology.md"
+
+  - date: "2024-01"
+    event: "Joined General Pacific Capital as Private Equity Analyst."
+    category: "experience"
+    importance: 4
+    link: "../experiences/general-pacific-capital-private-equity-analyst.md"
+
+  - date: "2024-05"
+    event: "Started Bank of China New York internship as Risk Analyst Intern and p-KYC project lead."
+    category: "experience"
+    importance: 5
+    link: "../experiences/bank-of-china-risk-analyst-intern.md"
+
+  - date: "2025-01"
+    event: "Joined Midwest Employers Casualty as Consultant."
+    category: "experience"
+    importance: 5
+    link: "../experiences/midwest-employers-casualty-consultant.md"
+
+  - date: "2025-02"
+    event: "Co-authored 'Probing Perceptual Constancy in Large Vision-Language Models' preprint."
+    category: "research"
+    importance: 4
+    link: "../projects/probing-perceptual-constancy-in-vlms.md"
+
+  - date: "2025-05"
+    event: "Completed WashU MS program and TEIMS vice president term."
+    category: "education"
+    importance: 5
+    link: "../education/washu-ms-isem.md"
+
+  - date: "2025-07"
+    event: "Joined Epsilon as Data Scientist in Boston."
+    category: "experience"
+    importance: 5
+    link: "../experiences/epsilon-data-scientist.md"
+
+  - date: "2026-02"
+    event: "Co-authored 'A Very Big Video Reasoning Suite' preprint and public benchmark release."
+    category: "research"
+    importance: 5
+    link: "../projects/vbvr-a-very-big-video-reasoning-suite.md"
+
+metadata:
+  last_updated: "2026-03-01"
+  source: "Oliver Hong Resume 2026.1 + provided research papers"
