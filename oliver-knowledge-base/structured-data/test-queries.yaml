@@ -43,6 +43,13 @@ test_cases:
       - "Python applied in enterprise automation"
       - "ML/statistical modeling in finance and research benchmarks"
 
+  - query: "What is Oliver's LinkedIn profile URL?"
+    expected_docs:
+      - "../structured-data/resume.yaml"
+      - "../structured-data/raw/linkedin-profile-2026-03-01.md"
+    expected_facts:
+      - "https://www.linkedin.com/in/oliverhong/"
+
 metadata:
   last_updated: "2026-03-01"
   purpose: "retrieval and answer-quality regression checks for the personal RAG stack"

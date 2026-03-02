@@ -1,0 +1,36 @@
+name: "associate-investment-analyst-refg"
+keywords:
+  must:
+    - "investment"
+    - "portfolio"
+    - "risk"
+    - "analytics"
+  boost:
+    - "real estate"
+    - "mortgage"
+    - "loan"
+    - "origination"
+    - "allocation"
+    - "servicing"
+    - "due diligence"
+    - "compliance"
+    - "audit"
+    - "report"
+    - "term sheet"
+    - "irr"
+    - "lbo"
+    - "financial modeling"
+    - "excel"
+    - "vba"
+    - "sql"
+    - "power bi"
+  penalty:
+    - "unrelated reflection"
+section_caps:
+  experience_count: 4
+  leadership_count: 1
+bullet_caps_per_experience: [4, 5, 5, 4]
+trim_priority:
+  - "compress_bullets"
+  - "drop_low_score_bullets"
+  - "reduce_experience_count"

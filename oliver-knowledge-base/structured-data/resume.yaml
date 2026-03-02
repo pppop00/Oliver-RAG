@@ -7,7 +7,7 @@ personal_info:
     state: "MA"
     country: "USA"
   links:
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/oliverhong/"
     github: ""
     website: ""
     portfolio: ""
@@ -231,6 +231,7 @@ interests:
 
 source_documents:
   - "raw/resume-2026-raw.md"
+  - "raw/linkedin-profile-2026-03-01.md"
   - "../projects/sources/vbvr-2026-fulltext.md"
   - "../projects/sources/perceptual-constancy-vlms-2025-fulltext.md"
 

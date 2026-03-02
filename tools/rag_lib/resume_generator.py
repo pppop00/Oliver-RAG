@@ -8,7 +8,13 @@ from typing import Dict, List, Tuple
 
 import yaml
 
-from .docx_template import GeneratedResumeData, apply_generated_data, load_template, save_document
+from .docx_template import (
+    GeneratedResumeData,
+    apply_generated_data,
+    compose_two_col,
+    load_template,
+    save_document,
+)
 
 REQUIRED_POLICY_HEADINGS = [
     "## Skills Prioritization",
@@ -233,7 +239,11 @@ def _education_lines(resume: dict) -> List[str]:
     edu = resume.get("education", [])
     lines: List[str] = []
     for item in edu[:2]:
-        l1 = f"{item.get('institution', '')}    {_date_range(item.get('start_date', ''), item.get('end_date', ''))}"
+        l1 = compose_two_col(
+            str(item.get("institution", "")),
+            _date_range(item.get("start_date", ""), item.get("end_date", "")),
+            width=112,
+        )
         degree = item.get("degree", "")
         major = item.get("major", "")
         minor = item.get("minor", "")
@@ -303,8 +313,12 @@ def _prepare_experience_blocks(resume: dict, role_profile: dict, policy_doc: Pol
         highlights_sorted = sorted(highlights, key=_metrics_score, reverse=True)
         bullets = [_shorten(h, 130) for h in highlights_sorted[:cap]]
 
-        header = f"{exp.get('company', '')}    {exp.get('location', '')}".strip()
-        role = f"{exp.get('title', '')}    {_date_range(exp.get('start_date', ''), exp.get('end_date', ''))}".strip()
+        header = compose_two_col(str(exp.get("company", "")), str(exp.get("location", "")), width=112).strip()
+        role = compose_two_col(
+            str(exp.get("title", "")),
+            _date_range(exp.get("start_date", ""), exp.get("end_date", "")),
+            width=112,
+        ).strip()
         blocks.append({"header": header, "role": role, "bullets": bullets})
 
     # Hard one-page fallback: reduce experiences if too many long bullets.
@@ -320,7 +334,9 @@ def _leadership_block(resume: dict) -> Tuple[str, List[str]]:
     if not leadership_entries:
         return "", []
     entry = leadership_entries[0]
-    title = f"{entry.get('title', '')} - {entry.get('company', '')}    {_date_range(entry.get('start_date', ''), entry.get('end_date', ''))}"
+    left = f"{entry.get('title', '')} - {entry.get('company', '')}"
+    right = _date_range(entry.get("start_date", ""), entry.get("end_date", ""))
+    title = compose_two_col(left, right, width=112)
     bullets = [_shorten(x, 150) for x in (entry.get("highlights", []) or [])[:2]]
     return title, bullets
 
