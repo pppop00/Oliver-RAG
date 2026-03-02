@@ -9,6 +9,7 @@ from typing import Dict, List, Tuple
 import yaml
 
 from .docx_template import (
+    EXPERIENCE_SLOTS,
     GeneratedResumeData,
     apply_generated_data,
     compose_two_col,
@@ -290,7 +291,41 @@ def _skills_lines(resume: dict) -> List[str]:
     interests = resume.get("interests", [])
     interest_line = f"Interest: {', '.join(interests)}" if interests else "Interest:"
 
+    # Keep the skills section visually dense: avoid a blank middle line.
+    if not analytics_line_2:
+        analytics_line_2 = interest_line
+        interest_line = ""
+
     return [technical, db_line, analytics_line, analytics_line_2, interest_line]
+
+
+def _supplement_bullets(exp: dict, bullets: List[str], target_count: int) -> List[str]:
+    out = list(bullets)
+    tech = [str(x).strip() for x in (exp.get("technologies", []) or []) if str(x).strip()]
+    domains = [str(x).strip() for x in (exp.get("domains", []) or []) if str(x).strip()]
+
+    supplements: List[str] = []
+    if len(out) < target_count and tech:
+        supplements.append(_shorten(f"Tools: {', '.join(tech[:6])}", 130))
+    if len(out) < target_count and domains:
+        supplements.append(_shorten(f"Domain focus: {', '.join(domains[:5])}", 130))
+    title = str(exp.get("title", "")).strip()
+    company = str(exp.get("company", "")).strip()
+    if len(out) < target_count and (title or company):
+        summary = f"Role focus: {title}"
+        if company:
+            summary += f" at {company}"
+        supplements.append(_shorten(summary, 130))
+
+    for line in supplements:
+        if len(out) >= target_count:
+            break
+        if line and line not in out:
+            out.append(line)
+
+    while len(out) < target_count:
+        out.append("")
+    return out[:target_count]
 
 
 def _prepare_experience_blocks(resume: dict, role_profile: dict, policy_doc: PolicyDoc) -> List[Dict[str, List[str] | str]]:
@@ -302,18 +337,23 @@ def _prepare_experience_blocks(resume: dict, role_profile: dict, policy_doc: Pol
     ]
     scored.sort(key=lambda x: x[1], reverse=True)
 
-    caps = role_profile.get("bullet_caps_per_experience", [4, 5, 5, 4])
-    exp_count = int(role_profile.get("section_caps", {}).get("experience_count", 4))
+    caps = role_profile.get("bullet_caps_per_experience", [4, 5, 5, 4, 3])
+    exp_count = min(len(EXPERIENCE_SLOTS), len(scored))
 
     selected = [exp for exp, _ in scored[:exp_count]]
     blocks = []
     for idx, exp in enumerate(selected):
-        cap = caps[idx] if idx < len(caps) else 4
+        profile_cap = caps[idx] if idx < len(caps) else 4
+        slot_cap = len(EXPERIENCE_SLOTS[idx]["bullets"])
+        cap = max(profile_cap, slot_cap)
         highlights = exp.get("highlights", []) or []
         highlights_sorted = sorted(highlights, key=_metrics_score, reverse=True)
         bullets = [_shorten(h, 130) for h in highlights_sorted[:cap]]
+        bullets = _supplement_bullets(exp, bullets, cap)
 
-        header = compose_two_col(str(exp.get("company", "")), str(exp.get("location", "")), width=112).strip()
+        company = str(exp.get("company", "")).upper()
+        location = str(exp.get("location", "")).upper()
+        header = compose_two_col(company, location, width=112).strip()
         role = compose_two_col(
             str(exp.get("title", "")),
             _date_range(exp.get("start_date", ""), exp.get("end_date", "")),
@@ -321,24 +361,22 @@ def _prepare_experience_blocks(resume: dict, role_profile: dict, policy_doc: Pol
         ).strip()
         blocks.append({"header": header, "role": role, "bullets": bullets})
 
-    # Hard one-page fallback: reduce experiences if too many long bullets.
-    total_chars = sum(len(b) for block in blocks for b in block["bullets"])
-    if total_chars > 2300 and len(blocks) > 3:
-        blocks = blocks[:3]
-
     return blocks
 
 
-def _leadership_block(resume: dict) -> Tuple[str, List[str]]:
+def _leadership_block(resume: dict) -> Tuple[str, str, List[str]]:
     leadership_entries = [e for e in resume.get("experience", []) if str(e.get("employment_type", "")).lower() == "leadership"]
     if not leadership_entries:
-        return "", []
+        return "", "", []
     entry = leadership_entries[0]
-    left = f"{entry.get('title', '')} - {entry.get('company', '')}"
-    right = _date_range(entry.get("start_date", ""), entry.get("end_date", ""))
-    title = compose_two_col(left, right, width=112)
-    bullets = [_shorten(x, 150) for x in (entry.get("highlights", []) or [])[:2]]
-    return title, bullets
+    header = compose_two_col(str(entry.get("company", "")).upper(), str(entry.get("location", "")).upper(), width=112)
+    role = compose_two_col(
+        str(entry.get("title", "")),
+        _date_range(entry.get("start_date", ""), entry.get("end_date", "")),
+        width=112,
+    )
+    bullets = [_shorten(x, 150) for x in (entry.get("highlights", []) or [])[:1]]
+    return header, role, bullets
 
 
 def _next_output_path(output_dir: Path, role_slug: str) -> Path:
@@ -390,7 +428,7 @@ def generate_role_resume(root: Path, role: str) -> GenerationResult:
     education_lines = _education_lines(resume)
     skill_lines = _skills_lines(resume)
     experiences = _prepare_experience_blocks(resume, profile, policy_doc)
-    leadership_title, leadership_bullets = _leadership_block(resume)
+    leadership_header, leadership_role, leadership_bullets = _leadership_block(resume)
 
     generated = GeneratedResumeData(
         name=name,
@@ -398,7 +436,8 @@ def generate_role_resume(root: Path, role: str) -> GenerationResult:
         education_lines=education_lines,
         skill_lines=skill_lines,
         experiences=experiences,
-        leadership_title=leadership_title,
+        leadership_header=leadership_header,
+        leadership_role=leadership_role,
         leadership_bullets=leadership_bullets,
     )
 
